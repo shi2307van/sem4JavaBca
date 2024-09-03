@@ -1,0 +1,5 @@
+class ProductCheck extends Exception{
+  public ProductCheck(String msg){
+    super(msg);
+  }
+}

@@ -1,0 +1,40 @@
+import java.util.*;
+
+class ArrayOfStudent{
+  public static void main(String[] args){
+    Scanner sc = Scanner(System.in);
+    int n,sem,rno,ch;
+    char div;
+    String name,email;
+    System.out.println("Enter Number Of Student :-");
+    n = sc.nextInt();
+    
+    Student s[] = new Student[n];
+    for(int i=0;i<n;i++){
+       System.out.println("Enter Properties Of Student %d :-",i+1);
+        System.out.println("Enter Roll No Student :-");
+        rno = sc.nextInt();
+        System.out.println("Enter Name Of Student :-");
+        name = sc.nextLine().toUpperCase();
+        System.out.println("Enter Semester Of Student :-");
+        sem = sc.nextInt();
+        System.out.println("Enter Division Of Student :-");
+        div = sc.nextLine().trim().toUpperCase().charAt(0);
+        System.out.println("Enter Email Of Student :-");
+        email = sc.nextLine().toLowerCase();
+        
+        s[i] = new Student(rno,name,sem,div,email);
+    }
+    
+    do{
+       System.out.println("===============MENU===============");
+       System.out.println("1. Display All Student..");
+       System.out.println("2. Display Only 4 Sem Student..");
+       System.out.println("3. Display Only 4 Sem Division B Student..");
+       System.out.println("4. Display Student Having SubString \"ya\"..");
+       System.out.println("5. Display Student in Ascending Order Of Rollno..");
+       System.out.println("6. Display Student in Descending Order Of Their Name..");
+       System.out.println("7.Exit..");
+    }while(ch!=7);
+  }
+}

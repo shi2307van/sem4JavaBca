@@ -1,0 +1,12 @@
+import java.awt.*;
+import java.applet.*;
+
+/*<applet code= Demo1>
+  <param name="sname" value="shivani">
+  </applet>*/
+
+public class Demo1 extends Applet{
+  public void paint(Graphics g){
+    String name= getParameter("sname");
+  }
+}

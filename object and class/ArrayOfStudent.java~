@@ -1,0 +1,70 @@
+import java.util.*;
+
+class ArrayOfStudent{
+  public static void main(String[] args){
+    Scanner sc = new Scanner (System.in);
+    
+    int n,sem ,rollno,ch;
+    char div;
+    String name,email;
+    
+    System.out.println("Enter no .of Student :-");
+    n = sc.nextInt();
+    
+    Student s[] = new Student[n];
+    for(int i=0;i<n;i++){
+      System.out.println("Enter Properties Of Student %d:=",i+1);
+       System.out.println("\n Rollno :-");
+       rollno = sc.nextInt();
+       System.out.println("\n Name :-");
+       name = sc.nextLine();
+       System.out.println("\n Semester :-");
+       sem = sc.nextInt();
+       System.out.println("\n Division :-");
+       div = sc.nextLine().trim().toUpperCase().charAt(0);
+       System.out.println("\n Email :-");
+       email = sc.nextLine().toLowerCase();
+    }
+    do{
+      System.out.pritnln("=========Menu=========");
+      System.out.pritnln("1. Display All Student.");
+      System.out.pritnln("2. Display Only 4 Sem Student");
+      System.out.pritnln("3. Display only 4 Sem and Div B Student");
+      System.out.pritnln("4. Display Student Having Substring \"ya\" ");
+      System.out.pritnln("5. Display Student In Ascending Order Of Rollno");
+      System.out.pritnln("6. Display Student In Descending Order Of Thier Name");
+      System.out.pritnln("7. Exit");  
+      System.out.pritnln("Enter Your Choice :=");
+      ch = sc.nextInt();
+      
+      Switch(ch){
+        case 1:
+          System.out.pritnln("\n ============1. Display All Student.=============");
+          System.out.pritnf("\n %-4s %-20s %-4s %-4s %-25s","Rollno","Full Name","Semester","Division","Email-ID");
+          for(int i=0;i<n;i++){
+            System.out.println(s[i]);
+        break;
+        
+        case 2:
+          System.out.pritnln("\n ============2. Display Only 4 Sem Student.=============");
+          System.out.pritnf("\n %-4s %-20s %-4s %-4s %-25s","Rollno","Full Name","Semester","Division","Email-ID");
+          for(int i=0;i<n;i++){
+            if(s[i].getsem() == 4){
+              System.out.println(s[i]);
+            }
+          }
+        break;
+        case 3:
+        break;
+        case 4:
+        break;
+        case 5:
+        break;
+        case 6:
+        break;
+        case 7:
+        break;
+      }
+    }while(ch!=7);
+  }
+}

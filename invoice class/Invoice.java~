@@ -1,0 +1,43 @@
+class Invoice implements Payable{
+  private int proid;
+  private String name;
+  private int qty;
+  private double price;
+  
+  Invoice(int proid,String name,int qty,double price){
+    this.proid = proid;
+    this.name = name;
+    this.qty = qty;
+    this.price = price;
+  }
+  int getProid(){
+    return proid;
+  }
+  String getName(){
+    return name;
+  }
+    int getQty(){
+    return qty;
+    }
+    double getPrice(){
+    return price;
+    }
+    void setProid(int proid){
+      this.proid = proid;
+    }
+    void setName(String name){
+      this.name = name;
+    }
+    void setQty(int qty){
+      this.qty = qty;
+    }
+    void setPrice(double price){
+      this.price = price;
+    }
+    public  double getPaymentAmount(double price,double qty){
+      return price * qty;
+    }
+    public String toString(){
+      return String.format("\n %4d %20s %20d %20d %25d",proid,name,qty,price,getPaymentAmount(price,qty));
+    }
+}

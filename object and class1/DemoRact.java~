@@ -1,0 +1,15 @@
+class DemoRact
+{
+  public static void main(String[] args)
+  {
+    Rectangle rec = new Rectangle(5,10);
+    
+    float peri,area;
+    
+    peri = rec.getPeri();
+    area = rec. getArea();
+    
+    System.out.printf(" Perimeter of Ractangle :- %f",peri);
+    System.out.printf(" Area of Rectangle :- %f",peri);
+  }
+}

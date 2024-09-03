@@ -1,0 +1,28 @@
+class ClassRectangle
+{
+  float l,b;
+  ClassRectangle(float l,float b){
+    this.l = l;
+    this.b = b; 
+  }
+  double getPerimeter(){
+    return 2*(l +b );
+  }
+  double getArea(){
+    return l*b ;
+  }
+}
+class DemoRectangle
+{
+  public static void main(String[] args)
+  {
+    ClassRectangle rec = new ClassRectangle(5,10);
+    double area,peri;
+    
+    peri = rec.getPerimeter();
+    area = rec.getArea();
+    
+    System.out.printf(" perimeter of Rectangle is :- %f",peri);
+    System.out.printf("area of Rectangle is :- %f",area);
+  }
+}

@@ -1,0 +1,24 @@
+import java.util.*;
+class RuntimePloy{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int ch;
+    Shape s;
+    Reactangle r = new Reactangle(7,8);
+    Triangle t = new Triangle(12,6);
+    System.out.println("=====Menu=======");
+    System.out.println("1.Ractangle");
+    System.out.println("2.Triangle");
+    System.out.println("Enter your choice");
+    ch = sc.nextInt();
+    if(ch == 1)
+      s = r;
+    else if(ch == 2)
+      s = t;
+    else 
+      System.out.println("Invalid choice");
+    
+    System.out.println("Area Of = "+s.getArea());
+      
+  }
+}

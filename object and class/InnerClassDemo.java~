@@ -1,0 +1,8 @@
+class InnerClassDemo{
+  public static void main(String[] args){
+    Outer ou = new Outer();
+    ou.test();
+    Outer.Inner out = Outer.new Inner();
+    out.display();
+  }
+}

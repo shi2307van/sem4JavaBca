@@ -1,0 +1,26 @@
+import java.util.*;
+
+class RightAngleTriangle
+{
+  public static void main(String[] args)
+  {
+    Scanner in = new Scannner(System.in);
+    
+    double width,height,area,pri,hyp;
+    
+    do
+    {
+      System.out.println("Enter the Value of Height : ");
+      height = in.nextDouble();
+      
+      System.out.println("Enter the value of Width : ");
+      width = in.nextDouble();
+       
+      if(height < 0 || width < 0)
+        System.out.println("Please the enter correct value !! ");
+        
+    }while(height < 0 || width < 0);
+    
+    area = 0.5 * width * height;
+  }
+}

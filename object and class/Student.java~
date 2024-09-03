@@ -1,0 +1,48 @@
+class Student{
+  Private int rollno;
+  Private String name;
+  Private int sem;
+  Private char div;
+  Private String email;
+  
+  Student(int rollno,String name,int sem, char div, String email){
+    this.rollno = rollno;
+    this.name = name;
+    this.sem = sem;
+    this.div = div;
+    this.email = email;
+  }
+  int getRollno(){
+    return rollno;
+  }
+  String getName(){
+    return name;
+  }
+  int getSem(){
+    return sem;
+  }
+  char getDiv(){
+    return div;
+  }
+  String getEmail(){
+    return email;
+  }
+  void setRollno(){
+   this.rollno = rollno;
+  }
+  void setName(){
+   this.name = name;
+  }
+  void setSem(){
+   this.sem = sem;
+  }
+  void setDiv(){
+    this.div = div;
+  }
+  void setEmail(){
+    this.email = email;
+  }
+  public String toString(){
+    return String.format("\n %4d %20s %4d %4c %25s",rollno,name,sem,div,email);
+  }
+}

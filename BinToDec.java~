@@ -1,0 +1,45 @@
+import java.util.*;
+
+class BinToDec
+{
+  Static boolean isBinStr(String str)
+  {
+    char bit;
+    for(int i=0;i<bit.length;i++)
+    {
+      bit = str.CharAt(i);
+      if(bit !='0' || bit!='1')
+      {
+        return false;
+      }
+      return true;
+    }
+  }
+  static int binTodec(String str)
+  {
+    int bit;
+    int pow = 1;
+    int sum = 0;
+    
+    if( isBinStr(str))
+      true;
+    else
+      false;
+    
+    for(str.length()-1;i>=0;i--)
+    {
+      bit = (int)(str.CharAt(i));
+      sum = sum + bit * pow;
+      pow *= 2;
+    }
+    System.out.print("sum ",sum);
+  }
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    String str;
+    System.out.print("Enter the binary code of any number %s ",str);
+    str = sc.nextLine();
+    binTodec(str);
+  }
+}

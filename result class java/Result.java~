@@ -1,0 +1,22 @@
+import java.util.*;
+
+class Result{
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    String sname,cname;
+    int seatNo,code,pmark;
+    int marks = new int[5];
+    int cnt = 0;
+    
+    try{
+      System.out.println("Enter Is Your Seat No :-");
+      seatNo = sc.nextInt();
+      if(seatNo<=0)
+      {
+        throw new InvalidSeatNoException();
+      }
+      System.out.println("Enter Is Your Name :-");
+      sname = sc.nextLine();
+    }
+  }
+}

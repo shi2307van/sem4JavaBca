@@ -1,0 +1,30 @@
+import java.util.*;
+
+class CheckPalindromeNo
+{
+  public static void main(String[] args)
+  {
+    Scanner in = new Scanner(System.in);
+    
+    int num,sum,rev;
+    int temp = num;
+    
+    System.out.println("Enter the any number :- ");
+    num = in.nextInt();
+    
+    while(n!=0)
+    {
+      rev = n % 10;
+      sum = (sum*10) + rev;
+      num = num / 10;
+    }
+    if(temp == sum)
+    {
+      System.out.printf(" %d is palindrome number ",num);
+    }
+    else
+    {
+      System.out.printf(" %d is palindrome number ",num);
+    }
+  }
+}

@@ -1,0 +1,10 @@
+class Test extends Stud{
+  float part1,part2;
+  
+  void getMarks(){
+    System.out.println("Enter Marks1 :-");
+    part1 = intFloat();
+     System.out.println("Enter Marks2 :-");
+    part2 = intFloat();
+  }
+}

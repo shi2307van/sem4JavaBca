@@ -1,0 +1,34 @@
+class Product implements Runnable
+{
+  Thread t;
+  String nm[];
+  int price[];
+  int qty[];
+  Product(String nm[],int price[],int qty[])
+  {
+    this.nm=nm;
+    this.price=price;
+    this.qty=qty;
+    t.start();
+  }
+  void SortProduct()
+  {
+    int temp;
+    String temp1;
+    for(int i=0;i<10;i++)
+    {
+      for(int j=i+1;j<10;j++)
+      {
+        if(qty[i]<qty[j])
+        {
+          temp=qty[i];
+          qty[i]=qty[j];
+          qty[j]=temp;
+          temp1=nm[i];
+          nm[i]=nm[j];
+          nm[j]=temp1;
+        }
+      }
+    }
+  }
+}

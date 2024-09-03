@@ -1,0 +1,59 @@
+import java.util.*;
+class ArrayOfInvoice{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    int n,proid =0,qty =0;
+    double price =0.0,sum=0.0;
+    String name="";
+    
+    System.out.println("\n Enter the No Of Product You Buy :-");
+    n = sc.nextInt();
+    
+    Invoice iv[] = new Invoice[n];
+    for(int i=0;i<n;i++){
+      try{
+      System.out.printf("\n Enter the Properties Of Paticular Product:-",i+1);
+       System.out.println("\n Enter the Product Number :-");
+      if(proid < 0)
+        throw new ProductCheck("Please Enter Valid Number .Only Contain Positive Number.");
+      else
+        proid = sc.nextInt();
+      System.out.println("\n Enter the Product Name :-");
+      if(name==null)
+         throw new ProductCheck("Please Enter Any Value ");
+      else
+        name = sc.next();
+      System.out.println("\n Enter the Product Quantity :-");
+      if(qty < 0)
+         throw new ProductCheck("Please Enter Valid Number .Onlt Contain Positive Number.");
+      else
+        qty = sc.nextInt();
+      System.out.println("\n Enter the Product Price :-");
+      if(price < 0)
+          throw new ProductCheck("Please Enter Valid Number .Only Contain Positive Number.");
+      else
+        price = sc.nextDouble();
+        iv[i] = new Invoice(proid,name,qty,price);
+    }
+      catch(ProductCheck e){
+        System.out.println("Exception :-"+e);
+      }
+      for(i=0;i<n;i++){
+        sum = sum + iv[i].getPaymentAmount(price,qty);
+        System.out.println(iv[i]);
+      }
+    System.out.println("========Display All The Product In Proper Format=========");
+    System.out.printf("\n %4s %20s %20s %20s %25s","Product id","Product Name","Product Quantity","Product Price","Product Total");
+    for(i=0;i<n;i++){
+     System.out.print(iv[i].getProid());
+      System.out.print(iv[i].getName());
+      System.out.print(iv[i].getQty());
+      System.out.print(iv[i].getPrice());
+      System.out.print(iv[i].getPaymentAmount(price,qty));
+      
+   // System.out.printf("\n %4d %20s %20d %20d %20d",proid,name,qty,price,sum);
+    }
+  }
+}
+}

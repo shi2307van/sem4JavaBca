@@ -1,0 +1,21 @@
+import java.util.*;
+
+class StudentInfo
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in)
+    {
+      int n ;
+      do
+      {
+        System.out.print("Enter array size :-");
+        n=sc.nextInt();
+        if(n<=0)
+        
+           System.out.printf("\n oopss!!!!!! Array size invalid please try again \n ");
+        
+      }while(n<=0);
+    }
+  }
+}

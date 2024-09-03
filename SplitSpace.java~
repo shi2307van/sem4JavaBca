@@ -1,0 +1,20 @@
+import java.util.*;
+
+class SplitSpace
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    int i=0;
+    String obs = new String();
+    System.out.print("Enter one sentence of your choice :-");
+    obs = sc.nextLine();
+    String nline[] = obs.split(" ");
+    String srstr[] = new String[nline.length];
+    for( i=0;i<nline.length;i++)
+    {
+      srstr[i] = nline[i];
+    }
+    System.out.printf(srstr[i]);
+  }
+}
